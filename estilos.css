@@ -20,6 +20,11 @@ h1{
     color: rgb(73, 73, 73);
 }
 
+.cuerpo{
+    background-image: url("./Image/FONDO.jpg");
+    background-position: center;
+    background-size: cover;
+}
 .cuerpo1{
     display: flex;
     flex-direction: column;
@@ -27,24 +32,54 @@ h1{
     align-items: flex-start;
     padding-block: 50px;
     width: 100%;
-    background-image: url("./Image/FONDO.jpg");
-    background-position: center;
-    background-size: cover;
 }
+
+/** cuerpo2
+    producto
+    producto__imagen
+    producto__detalles
+    producto__titulo
+    producto__precio
+    producto-agregar */
 
 .cuerpo2{
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    padding-block: 50px;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    background-image: url("./Image/FONDO.jpg");
-    background-position: center;
-    background-size: cover;
 }
+
+.producto{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 236, 34);
+    padding: 10px;
+    margin: 10px;
+}
+
+.producto__imagen{
+    height: auto;
+    width: 100%;
+}
+
+.producto__detalles{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.producto-agregar{
+    padding: 5px;
+    background-color: rgb(146, 146, 146);
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 50px;
+}
+
 
 .cuerpo__texto{
     width: 30%;

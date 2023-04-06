@@ -61,19 +61,64 @@ function seleccionDeHamburguesas(){
         cuerpo1.remove();
         const div = document.createElement("div");
         div.classList.add("cuerpo2");
-        div.innerHTML = `<img class="producto-imagen" src= "${producto.imagen}" alt="${producto.titulo}">
-        <div class="producto-detalles">
-            <h3 class="producto-titulo">${producto.titulo}</h3>
-            <p class="producto-precio">$${producto.precio}</p>
-            <button class="producto-agregar" id="${producto.id}">Agregar</button>
-            </div>`;
+        div.innerHTML = `
+        <div class="producto">
+            <img class="producto__imagen" src= "${producto.imagen}" alt="${producto.nombre}">
+            <div class="producto__detalles">
+                <h3 class="producto__titulo">${producto.nombre}</h3>
+                <p class="producto__precio">$${producto.precio}</p>
+                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+            </div>
+        </div>`;
 
             cuerpo.append(div);
     })
 }
 
-seleccionDeHamburguesas();
-/**todosLosProductos.forEach((producto) => {
-    console.log(producto.nombre, producto.precio);
-})
-**/
+cuerpo__hamburguesas.addEventListener("click", seleccionDeHamburguesas);
+
+function seleccionDeAcompaniamiento(){
+    acompaniamientos.forEach(producto => {
+        
+        cuerpo1.remove();
+        const div = document.createElement("div");
+        div.classList.add("cuerpo2");
+        div.innerHTML = `
+        <div class="producto">
+            <img class="producto__imagen" src= "${producto.imagen}" alt="${producto.nombre}">
+            <div class="producto__detalles">
+                <h3 class="producto__titulo">${producto.nombre}</h3>
+                <p class="producto__precio">$${producto.precio}</p>
+                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+            </div>
+        </div>`;
+
+            cuerpo.append(div);
+    })
+}
+
+cuerpo__acompaniamiento.addEventListener("click", seleccionDeAcompaniamiento);
+
+
+function seleccionDeBebidas(){
+    bebidas.forEach(producto => {
+        
+        cuerpo1.remove();
+        const div = document.createElement("div");
+        div.classList.add("cuerpo2");
+        div.innerHTML = `
+        <div class="producto">
+            <img class="producto__imagen" src= "${producto.imagen}" alt="${producto.nombre}">
+            <div class="producto__detalles">
+                <h3 class="producto__titulo">${producto.nombre}</h3>
+                <p class="producto__precio">$${producto.precio}</p>
+                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+            </div>
+        </div>`;
+
+            cuerpo.append(div);
+    })
+}
+
+cuerpo__bebidas.addEventListener("click", seleccionDeBebidas);
+
